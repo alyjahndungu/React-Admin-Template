@@ -16,7 +16,7 @@ import HotelIcon from '@material-ui/icons/Hotel';
 import '../index.css';
 
 export const mainListItems = (
-  <div class="MuiTypography-root sc-fzqAbL sc-fzpkqZ cMJjnA MuiTypography-body1">
+  <div class="MuiTypography-root cMJjnA ">
 
     <ListItem button>
       <ListItemIcon>

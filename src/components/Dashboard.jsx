@@ -135,7 +135,7 @@ export default function Dashboard() {
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
-    <div class="container-fluid MuiTypography-root sc-fzqAbL sc-fzpkqZ cMJjnA MuiTypography-body1">
+    <div class="container-fluid MuiTypography-rootcMJjnA" >
     
     <div class="row">
       <div className="col-md-12">
