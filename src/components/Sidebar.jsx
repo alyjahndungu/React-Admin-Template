@@ -16,15 +16,15 @@ import HotelIcon from '@material-ui/icons/Hotel';
 import '../index.css';
 
 export const mainListItems = (
-  <div class="MuiTypography-root cMJjnA ">
+  <div className="MuiTypography-root cMJjnA">
 
     <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-     <ListItemText  primary="Dashboard" />
+     <ListItemText primary="Dashboard" />
 
-     
+    
     </ListItem>
     <ListItem button>
       <ListItemIcon>

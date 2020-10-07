@@ -8,7 +8,7 @@ export default class Home extends Component {
         return (
 
             <div className="App container-fluid">
-                 <div class="row">
+                 <div className="row">
                 <div className="col-sm-4"></div>
                 <div className="col-sm-4">
               

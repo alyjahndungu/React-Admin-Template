@@ -36,9 +36,7 @@ function Copyright() {
     </Typography>
   );
 }
-
 const drawerWidth = 240;
-
 const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex', 
@@ -135,9 +133,9 @@ export default function Dashboard() {
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
-    <div class="container-fluid MuiTypography-rootcMJjnA" >
+    <div className="container-fluid MuiTypography-rootcMJjnA" >
     
-    <div class="row">
+    <div className="row">
       <div className="col-md-12">
     
     <div className={classes.root}>
@@ -154,8 +152,8 @@ export default function Dashboard() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography component="h6" variant="h6" color="inherit" noWrap className={classes.title}>
-            Ternst<i class="fa fa-assistive-listening-systems" aria-hidden="true"></i>ne C<i class="fa fa-assistive-listening-systems" aria-hidden="true"></i>re
+          <Typography component="h6"  color="inherit" noWrap className={classes.title}>
+            Ternst<i className="fa fa-assistive-listening-systems" aria-hidden="true"></i>ne C<i className="fa fa-assistive-listening-systems" aria-hidden="true"></i>re
             System
           </Typography>
           <IconButton color="inherit">
