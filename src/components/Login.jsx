@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-
+import hands from '../static/images/hands.png';
 import {Link} from "react-router-dom";
 
+import '../index.css';
 
 export default class Login extends Component {
     render() {
@@ -11,34 +12,37 @@ export default class Login extends Component {
     <div className="row">
 
     <div className="col-sm-4"></div>
-    <div className="col-sm-4">
-     <div class=" card-header info-color white-text">
-      TERNSTONE FINANCE
-    </div>
-    <div class="card-body border border-info rounded mb-0 p-5 wow rotateIn">
-    <h4 class="card-title">Sign in</h4>
-      <hr/>
-    <form action="" method="post">
-    <div class="form-group">
-      <small  className="text-muted">Username</small>
-      <input type="text" name=""  className="form-control rounded-pill" placeholder=""/>
+    <div className="col-sm-4 assn">
+     <div className=" card-header info-color mb-1  white-text">
+    <h3 className="access">Sunx<span className="accessb">Access</span> </h3>
     </div>
 
-    <div class="form-group my-4 ">
-      <small className="text-muted">Password</small>
-      <input type="password" className="form-control rounded-pill" name=""  placeholder=""/>
+    <div className="card-body border border-info rounded mb-1 p-5 grey lighten-5">
+    <img src={hands} className="logo" alt="logo" />
+   
+       <h5 className="access">Sign  <span className="accessb">in</span> </h5>
+      <hr/>
+    <form action="" method="post">
+    <div className="form-group">
+      <small  className="text-muted access">Username</small>
+      <input type="text" name=""  className="form-control rounded-pill" placeholder="" required/>
+    </div>
+
+    <div className="form-group my-4 ">
+      <small className="text-muted access">Password</small>
+      <input type="password" className="form-control  rounded-pill" name=""  placeholder="" required/>
     </div>
     
-       <button className="btn rounded-pill btn-success" >
+       <button className="btn text-white btn-outline-pink accent-4 btn-sm rounded-pill" >
             sign in <span className="badge badge-primary "></span>
     </button>
 
     <Link to="/Dashboard" className="btn btn-info btn-sm">sign in test button</Link>
     </form>
-       <Link to="/Register" className="btn btn-info btn-sm">Create an Account?</Link>
+       
     </div>
-    <div class="card-footer text-muted info-color white-text">
-      <p class="mb-0">Your leading finance provider</p>
+    <div className="card-footer text-muted info-color white-text">
+      <Link to="/Register" className="btn text-white btn-outline-white accent-4 btn-sm rounded-pill">Create an Account?</Link>
     </div>
     </div>
     <div className="col-sm-4"></div>

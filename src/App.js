@@ -26,7 +26,6 @@ render() {
 
           <Switch>
 
-          
              <Route path="/MainPage">
               <MainPage />
              </Route>

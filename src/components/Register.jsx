@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from "react-router-dom";
-
+import hands from '../static/images/hands.png';
+import '../index.css';
 
 export default class Register extends Component {
       constructor(props) {
@@ -48,11 +49,14 @@ export default class Register extends Component {
                 <div className="col-sm-4"> </div>
                 <div className="col-sm-4" >
                 
-    <div class=" card-header info-color white-text">
-      TERNSTONE FINANCE
+    <div class=" card-header info-color mb-2 white-text">
+      <h3 className="access">Sunx<span className="accessb">Access</span> </h3>
     </div>
-    <div class="card-body border border-info rounded mb-0 p-5 wow rotateIn">
-      <h4 class="card-title">Create Account</h4>
+    <div class="card-body border border-info rounded mb-2 p-4 wow rotateIn">
+     <img src={hands} className="logo" alt="logo" />
+  
+       <h5 className="access">Create  <span className="accessb">Account</span> </h5>
+      
       <hr/>
         <form onSubmit={this.handleSubmit}>
                     <div class="form-group">
@@ -85,15 +89,15 @@ export default class Register extends Component {
                       <input type="password" name="password" value={this.state.name} onChange={this.handleInputChange}  class="form-control rounded-pill" name="" id="" placeholder=""/>
                     </div>
 
-                      <button type="submit"  className="btn rounded-pill btn-success">
+                      <button type="submit"  className="btn btn-outline-pink accent-4 btn-sm rounded-pill">
                          sign up <span className="badge badge-primary "></span>
                          </button>
 
                 </form>
-      <Link to="/Login" className="btn btn-info btn-sm">Have an Account?</Link>
+      
     </div>
-    <div class="card-footer text-muted info-color white-text">
-      <p class="mb-0">Your leading finance provider</p>
+    <div className="card-footer text-muted info-color white-text">
+      <Link to="/Login" className="btn btn-outline-white accent-4 btn-sm rounded-pill btn-sm">Have an Account?</Link>
     </div>
   
                 </div>

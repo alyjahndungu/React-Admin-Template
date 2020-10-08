@@ -41,10 +41,10 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(3),
+    marginTop: theme.spacing(5),
   },
   submit: {
-    margin: theme.spacing(3, 0, 2),
+    margin: theme.spacing(4, 0, 2),
   },
 }));
 
@@ -56,7 +56,7 @@ export default function PatientAccountPage() {
     
     <Container component="main"   maxWidth="xs">
       <CssBaseline />
-        <Card className={classes.root} variant="outlined">
+        <Card className="caerd" variant="outlined">
       <CardContent>
       <div className={classes.paper}>  
         <Typography component="h1" className="fTitle" variant="h5">
