@@ -1,8 +1,47 @@
 import React, { Component } from 'react'
+//import Alert from '@material-ui/core/Alert';
 import {Link} from "react-router-dom";
 
 
 export default class Register extends Component {
+      constructor(props) {
+        super(props);
+        this.state = {
+            firstname: '',
+            lastname: '',
+            username: '',
+            phoneno: '',
+            email: '',
+            password: ''
+        }
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+      handleInputChange(event) {
+        const target = event.target;
+        const inputName = target.name;        
+        const inputValue = target.value;
+
+        this.setState({
+            [inputName] : inputValue
+        });        
+    }
+
+  handleSubmit(event) {
+        event.preventDefault();   
+
+        ///const signUpRequest = Object.assign({}, this.state);
+
+      // //  signup(signUpRequest)
+      //   .then(response => {
+      //       Alert.success("You're successfully registered. Please login to continue!");
+      //       this.props.history.push("/login");
+      //   }).catch(error => {
+      //       Alert.error((error && error.message) || 'Oops! Something went wrong. Please try again!');            
+      //   });
+    }
+
     render() {
         return (
             <div className="App container-fluid">
@@ -16,35 +55,35 @@ export default class Register extends Component {
     <div class="card-body border border-info rounded mb-0 p-5 wow rotateIn">
       <h4 class="card-title">Create Account</h4>
       <hr/>
-        <form action="" method="post">
+        <form onSubmit={this.handleSubmit}>
                     <div class="form-group">
                       <small class="text-muted">Firstname</small>
-                      <input type="text" name="" class="form-control rounded-pill" placeholder=""/>
+                      <input type="text" name="firstname" value={this.state.name} onChange={this.handleInputChange}  class="form-control rounded-pill" placeholder=""/>
                     </div>
 
                       <div class="form-group">
                       <small class="text-muted">Lastname</small>
-                      <input type="text" name="" class="form-control rounded-pill" placeholder=""/>
+                      <input type="text" name="lastname" value={this.state.name} onChange={this.handleInputChange}  class="form-control rounded-pill" placeholder=""/>
                     </div>
 
                       <div class="form-group">
                       <small class="text-muted">Username</small>
-                      <input type="text" name="" class="form-control rounded-pill" placeholder=""/>
+                      <input type="text" name="username" value={this.state.name} onChange={this.handleInputChange}  class="form-control rounded-pill" placeholder=""/>
                     </div>
 
                     <div class="form-group">
                       <small class="form-text text-muted">Email Address</small>
-                      <input type="email" class="form-control rounded-pill" name="" placeholder=""/>
+                      <input type="email" name="email" class="form-control rounded-pill" value={this.state.name} onChange={this.handleInputChange}  placeholder=""/>
                     </div>
 
                        <div class="form-group">
                       <small class="text-muted">Phone Number</small>
-                      <input type="text" name="" class="form-control rounded-pill" placeholder=""/>
+                      <input type="text" name="phoneno" value={this.state.name} onChange={this.handleInputChange} class="form-control rounded-pill" placeholder=""/>
                     </div>
 
                     <div class="form-group">
                      <small class="text-muted">Password</small>
-                      <input type="password" class="form-control rounded-pill" name="" id="" placeholder=""/>
+                      <input type="password" name="password" value={this.state.name} onChange={this.handleInputChange}  class="form-control rounded-pill" name="" id="" placeholder=""/>
                     </div>
 
                       <button type="submit"  className="btn rounded-pill btn-success">

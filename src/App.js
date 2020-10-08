@@ -26,11 +26,7 @@ render() {
 
           <Switch>
 
-    
-              <Route path="/">
-               <MainPage />
-             </Route>
-
+          
              <Route path="/MainPage">
               <MainPage />
              </Route>
@@ -54,6 +50,11 @@ render() {
              <Route path="/PatientAccountPage">
                <PatientAccountPage />
              </Route>
+
+            <Route path="/">
+               <MainPage />
+             </Route>
+
         
             </Switch>
     </div>

@@ -37,6 +37,8 @@ export default class MainPage extends Component {
           <Link to="/" className="btn text-white btn-outline-pink accent-4  btn-sm rounded-pill">
                   Patient 
                   </Link>
+
+
                   </li>
     </ul>
   </div>
@@ -70,7 +72,8 @@ Stay at home and avoid close contact with other people for at least 7 days - peo
                   Sunx Access connects you to local health services when you need them most. Book GP appointments, 
                   order repeat prescriptions and discover local health services for you or your family via your mobile or home computer.
                   </p>
-                  <hr/>
+
+                   <hr/>
                   <div className="row">
                   <div className="col-sm-6">
                   <Link to="/Dashboard" className="btn text-white pink accent-4  btn-md rounded-pill">
