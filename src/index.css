@@ -1,10 +1,35 @@
+.logo{
+  width: 7rem;
+  height: 4rem;
+}
+.content1{
+  padding-top: 40px;
+}
 
+.content2{
+  padding-top: 70px;
+}
 
 .cMJjnA{
 font-family: 'Nunito', sans-serif;
 background-color: #333E3E;
 opacity: 3;
 color: aliceblue;
+}
+
+.textT{
+  color: #2c003e;
+  font-weight: bold;
+}
+
+.textp{
+  color: #2c003e;
+  font-weight: bold;
+}
+
+.health{
+  width: 36rem;
+  height: 15rem;
 }
 
 .PaccountPage{
