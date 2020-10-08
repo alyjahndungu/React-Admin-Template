@@ -16,7 +16,7 @@ export default class Home extends Component {
              Register as Doctor 
              </Link>
            
-             <Link to="/Register" className="btn btn-success btn-sm">
+             <Link to="/PatientAccountPage" className="btn btn-success btn-sm">
               Register as Patient 
              </Link>
             

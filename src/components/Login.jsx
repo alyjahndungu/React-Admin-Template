@@ -42,12 +42,8 @@ export default class Login extends Component {
     </div>
     </div>
     <div className="col-sm-4"></div>
-
   </div>
-
- 
-
-            </div>
+ </div>
         )
     }
 }

@@ -16,6 +16,7 @@ import List from '@material-ui/core/List';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
+import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import Avatar from '@material-ui/core/Avatar';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
@@ -141,7 +142,7 @@ export default function Dashboard() {
     <div className={classes.root}>
       <CssBaseline />
       
-      <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
+      <AppBar position="absolute"  className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
           <IconButton
             edge="start"
@@ -161,7 +162,13 @@ export default function Dashboard() {
               <NotificationsIcon />
             </Badge>
           </IconButton>
-            
+
+          <IconButton color="inherit">
+           <Badge badgeContent={4} color="secondary">
+                 <ChatBubbleOutlineIcon />
+                 </Badge>
+          </IconButton>
+                 
         <Avatar alt="T" src=".../static/images/logotab.png"/>
         </Toolbar>
    

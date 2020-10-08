@@ -10,7 +10,7 @@ import {
 import Home from "./components/Home";
 import Login from "./components/Login";
 import Register from "./components/Register";
-// import MainPage from "./components/MainPage";
+import PatientAccountPage from "./components/PatientAccountPage";
 import Dashboard from "./components/Dashboard";
 
 
@@ -20,6 +20,7 @@ render() {
   return (
     <Router>
     <div className="App container-fluid">
+
           <Switch>
            <Route path="/Home">
             <Home />
@@ -34,6 +35,11 @@ render() {
             <Route path="/Dashboard">
             <Dashboard />
              </Route>
+          
+             <Route path="/PatientAccountPage">
+            <PatientAccountPage />
+             </Route>
+          
           
           </Switch>
     </div>

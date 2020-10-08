@@ -66,7 +66,7 @@ export const mainListItems = (
 );
 
 export const secondaryListItems = (
-  <div className="mainListItems">
+  <div className="MuiTypography-root cMJjnA">
     <ListSubheader inset>Manage Account</ListSubheader>
     <ListItem button>
       <ListItemIcon>

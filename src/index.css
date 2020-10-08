@@ -2,12 +2,9 @@
 
 .cMJjnA{
 font-family: 'Nunito', sans-serif;
-   
-}
-
-.mainListItems{
-  background-color: rgb(27, 36, 48);
-  
+background-color: #333E3E;
+opacity: 3;
+color: aliceblue;
 }
 
 body {
