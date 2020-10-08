@@ -12,6 +12,7 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import PatientAccountPage from "./components/PatientAccountPage";
 import Dashboard from "./components/Dashboard";
+import MainPage from "./components/MainPage";
 
 
  export default class App extends Component{
@@ -22,6 +23,10 @@ render() {
     <div className="App container-fluid">
 
           <Switch>
+           <Route path="/">
+            <MainPage />
+            </Route>
+          
            <Route path="/Home">
             <Home />
           </Route>

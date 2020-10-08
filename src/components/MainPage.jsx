@@ -1,66 +1,75 @@
 import React, { Component } from 'react'
-import { BrowserRouter as Router } from "react-router-dom";
-//import { MDBSideNavCat, MDBSideNavNav,  MDBSideNavLink, MDBSideNav,MDBContainer, MDBIcon, MDBBtn } from "mdbreact";
-
-
-
+import {Link} from "react-router-dom";
+import Avatar from '@material-ui/core/Avatar';
 export default class MainPage extends Component {
-//       state = {
-//     sideNavLeft: false,
-//   }
-
-// sidenavToggle = sidenavId => () => {
-//   const sidenavNr = `sideNav${sidenavId}`
-//   this.setState({
-//     [sidenavNr]: !this.state[sidenavNr]
-//   });
-// };
 
     render() {
         
         return (
+
+ <div>  
+<nav className="mb-1 navbar navbar-expand-lg navbar-dark unique-color-dark">
+  <Link className="navbar-brand" href="#"><Avatar alt="Remy" src="static/images/hands-5482892_1280.png" /></Link>
+  
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+    aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+  </button>
+  <div className="collapse navbar-collapse" id="navbarSupportedContent-333">
+    <ul className="navbar-nav mr-auto">
+      <li className="nav-item active">
+        <Link className="nav-link" href="#">Home
+          <span className="sr-only">(current)</span>
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" href="#">Features</Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link" href="#">Pricing</Link>
+      </li>
+      <li className="nav-item dropdown">
+        <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">Dropdown
+        </Link>
+        <div className="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
+          <Link className="dropdown-item" href="#">Action</Link>
+          <Link className="dropdown-item" href="#">Another action</Link>
+          <Link className="dropdown-item" href="#">Something else here</Link>
+        </div>
+      </li>
+    </ul>
+    <ul className="navbar-nav ml-auto nav-flex-icons">
+      <li className="nav-item">
+        <Link className="nav-link waves-effect waves-light">
+          <i className="fab fa-twitter"></i>
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link className="nav-link waves-effect waves-light">
+          <i className="fab fa-google-plus-g"></i>
+        </Link>
+      </li>
+      <li class="nav-item dropdown">
+        <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-user"></i>
+        </Link>
+        <div className="dropdown-menu dropdown-menu-right dropdown-default"
+          aria-labelledby="navbarDropdownMenuLink-333">
+          <Link class="dropdown-item" href="#">Action</Link>
+          <Link class="dropdown-item" href="#">Another action</Link>
+          <Link className="dropdown-item" href="#">Something else here</Link>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+         
             <div  className="container-fluid">
                 <div className="row">
                     <div className="col-md-2 success-color">
-                   {/* <Router>
-        <MDBContainer>
-          <MDBBtn onClick={this.sidenavToggle("Left")}>
-            <MDBIcon size="lg" icon="bars" />
-          </MDBBtn>
-          <MDBSideNav slim fixed mask="rgba-blue-strong" triggerOpening={this.state.sideNavLeft} breakWidth={1300}
-            className="sn-bg-1">
-            <li>
-              <div className="logo-wrapper sn-ad-avatar-wrapper">
-                <a href="#!">
-                  <img alt="" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" className="rounded-circle" />
-                  <span>Anna Deynah</span>
-                </a>
-              </div>
-            </li>
-
-            <MDBSideNavNav>
-              <MDBSideNavLink to="/other-page" topLevel>
-                <MDBIcon icon="pencil-alt" className="mr-2" />Submit listing</MDBSideNavLink>
-              <MDBSideNavCat name="Submit blog" id="submit-blog" icon="chevron-right">
-                <MDBSideNavLink>Submit listing</MDBSideNavLink>
-                <MDBSideNavLink>Registration form</MDBSideNavLink>
-              </MDBSideNavCat>
-              <MDBSideNavCat name="Instruction" id="instruction" icon="hand-pointer" href="#">
-                <MDBSideNavLink>For bloggers</MDBSideNavLink>
-                <MDBSideNavLink>For authors</MDBSideNavLink>
-              </MDBSideNavCat>
-              <MDBSideNavCat name="About" id="about" icon="eye">
-                <MDBSideNavLink>Instruction</MDBSideNavLink>
-                <MDBSideNavLink>Monthly meetings</MDBSideNavLink>
-              </MDBSideNavCat>
-              <MDBSideNavCat name="Contact me" id="contact-me" icon="envelope">
-                <MDBSideNavLink>FAQ</MDBSideNavLink>
-                <MDBSideNavLink>Write a message</MDBSideNavLink>
-              </MDBSideNavCat>
-            </MDBSideNavNav>
-          </MDBSideNav>
-        </MDBContainer>
-      </Router> */}
+                
 
                     </div>
                     <div className="col-md-10 secondary-color">
@@ -68,6 +77,7 @@ export default class MainPage extends Component {
                     </div>
                 </div>
             </div>
+             </div>
         )
     }
 }
