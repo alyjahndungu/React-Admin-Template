@@ -8,64 +8,36 @@ import '../index.css';
 export default class MainPage extends Component {
 
     render() {
-        
         return (
 
- <div>  
-<nav className="mb-1 navbar navbar-expand-lg navbar-dark unique-color-dark">
+ <div className="mainpage img-fluid  ">  
+
+<nav className="mb-1 navbar navbar-expand-lg navbar-dark  grey lighten-5">
   <Link className="navbar-brand" href="#"><img src={hands} className="logo" alt="logo" /></Link>
   
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+  <button className="navbar-toggler  light-blue darken-4" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
     aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
   <div className="collapse navbar-collapse" id="navbarSupportedContent-333">
     <ul className="navbar-nav mr-auto">
-      <li className="nav-item active">
-        <Link className="nav-link" href="#">Home
-          <span className="sr-only">(current)</span>
+      <li className="nav-item holder">
+        <Link className="nav-link" href="#"> <h3 className="access">Sunx<span className="accessb">Access</span> </h3>
         </Link>
       </li>
-      <li className="nav-item">
-        <Link className="nav-link" href="#">Features</Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link" href="#">Pricing</Link>
-      </li>
-      <li className="nav-item dropdown">
-        <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">Dropdown
-        </Link>
-        <div className="dropdown-menu dropdown-default" aria-labelledby="navbarDropdownMenuLink-333">
-          <Link className="dropdown-item" href="#">Action</Link>
-          <Link className="dropdown-item" href="#">Another action</Link>
-          <Link className="dropdown-item" href="#">Something else here</Link>
-        </div>
-      </li>
+
     </ul>
     <ul className="navbar-nav ml-auto nav-flex-icons">
-      <li className="nav-item">
-        <Link className="nav-link waves-effect waves-light">
-          <i className="fab fa-twitter"></i>
-        </Link>
-      </li>
-      <li className="nav-item">
-        <Link className="nav-link waves-effect waves-light">
-          <i className="fab fa-google-plus-g"></i>
-        </Link>
-      </li>
-      <li class="nav-item dropdown">
-        <Link className="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user"></i>
-        </Link>
-        <div className="dropdown-menu dropdown-menu-right dropdown-default"
-          aria-labelledby="navbarDropdownMenuLink-333">
-          <Link class="dropdown-item" href="#">Action</Link>
-          <Link class="dropdown-item" href="#">Another action</Link>
-          <Link className="dropdown-item" href="#">Something else here</Link>
-        </div>
-      </li>
+      <li className="nav-item dropdown">
+        <Link to="/" className="btn  text-white btn-outline-pink accent-4  btn-sm rounded-pill">
+                   Doctor 
+                  </Link>
+           </li>    
+            <li className="nav-item dropdown"> 
+          <Link to="/" className="btn text-white btn-outline-pink accent-4  btn-sm rounded-pill">
+                  Patient 
+                  </Link>
+                  </li>
     </ul>
   </div>
 </nav>
@@ -101,7 +73,7 @@ Stay at home and avoid close contact with other people for at least 7 days - peo
                   <hr/>
                   <div className="row">
                   <div className="col-sm-6">
-                  <Link to="/" className="btn text-white pink accent-4  btn-md rounded-pill">
+                  <Link to="/Dashboard" className="btn text-white pink accent-4  btn-md rounded-pill">
                   Sign in 
                   </Link>
                   </div>

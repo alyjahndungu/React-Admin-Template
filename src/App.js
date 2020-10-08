@@ -12,7 +12,9 @@ import Login from "./components/Login";
 import Register from "./components/Register";
 import PatientAccountPage from "./components/PatientAccountPage";
 import Dashboard from "./components/Dashboard";
-import MainPage from "./components/MainPage";
+import MainPage from "./components/MainPage"; 
+ 
+
 
 
  export default class App extends Component{
@@ -23,30 +25,37 @@ render() {
     <div className="App container-fluid">
 
           <Switch>
-           <Route path="/">
-            <MainPage />
-            </Route>
+
+    
+              <Route path="/">
+               <MainPage />
+             </Route>
+
+             <Route path="/MainPage">
+              <MainPage />
+             </Route>
           
-           <Route path="/Home">
-            <Home />
-          </Route>
-          <Route path="/Login">
-            <Login />
-          </Route>
-          <Route path="/Register">
-            <Register />
-          </Route>
+             <Route path="/Home">
+               <Home />
+             </Route>
+
+             <Route path="/Login">
+              <Login />
+             </Route>
+
+             <Route path="/Register">
+               <Register />
+             </Route>
           
-            <Route path="/Dashboard">
-            <Dashboard />
+             <Route path="/Dashboard">
+               <Dashboard />
              </Route>
           
              <Route path="/PatientAccountPage">
-            <PatientAccountPage />
+               <PatientAccountPage />
              </Route>
-          
-          
-          </Switch>
+        
+            </Switch>
     </div>
   </Router>
   );

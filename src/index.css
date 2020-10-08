@@ -32,6 +32,20 @@ color: aliceblue;
   height: 15rem;
 }
 
+.access{
+  color: #2c003e;
+  font-weight: bold;
+}
+
+.mainpage{
+  background-image: url(./static/images/sunrise.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.accessb{
+  color: #fe346e;
+}
+
 .PaccountPage{
   background-image: url(./static/images/dna-3539309_960_720.webp);
   background-repeat: no-repeat;
