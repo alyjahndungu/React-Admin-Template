@@ -13,6 +13,7 @@ import Register from "./components/Register";
 import PatientAccountPage from "./components/PatientAccountPage";
 import Dashboard from "./components/Dashboard";
 import MainPage from "./components/MainPage"; 
+import TokenValidation from "./components/TokenValidation";
  
 
 
@@ -26,6 +27,11 @@ render() {
 
           <Switch>
 
+
+
+          <Route path="/TokenValidation">
+              <TokenValidation />
+             </Route>
              <Route path="/MainPage">
               <MainPage />
              </Route>
