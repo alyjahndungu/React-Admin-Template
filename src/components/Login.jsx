@@ -20,7 +20,7 @@ export default class Login extends Component {
     <div className="card-body border border-info rounded mb-1 p-5 grey lighten-5">
     <img src={hands} className="logo" alt="logo" />
    
-       <h5 className="access">Sign  <span className="accessb">in</span> </h5>
+       <h5 className="access">Sign  <span className="accessb">-in-</span> </h5>
       <hr/>
     <form action="" method="post">
     <div className="form-group">

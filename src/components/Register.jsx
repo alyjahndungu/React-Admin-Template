@@ -55,7 +55,7 @@ export default class Register extends Component {
     <div className="card-body border border-info rounded mb-2 p-4 wow rotateIn">
      <img src={hands} className="logo" alt="logo" />
   
-       <h5 className="access">Create  <span className="accessb">Account</span> </h5>
+       <h5 className="access">Create  <span className="accessb">- Doctor-</span> Account</h5>
       
       <hr/>
         <form onSubmit={this.handleSubmit}>
