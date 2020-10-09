@@ -22,7 +22,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import Home from './Home';  
 import '../index.css';
-import { mainListItems, secondaryListItems } from './Sidebar';
+import { mainListItems} from './Sidebar';
 
 
 function Copyright() {
@@ -187,8 +187,6 @@ export default function Dashboard() {
         </div>
         <Divider />
        <List>{mainListItems}</List>
-        <Divider />
-        <List>{secondaryListItems}</List>
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />

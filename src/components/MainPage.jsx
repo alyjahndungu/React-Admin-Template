@@ -41,8 +41,8 @@ export default class MainPage extends Component {
 
                   </li>
     </ul>
-  </div>
-</nav>
+    </div>
+    </nav>
          
             <div  className="container-fluid">
             <div className="row content1">
