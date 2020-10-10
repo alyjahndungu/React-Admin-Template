@@ -20,6 +20,7 @@ color: aliceblue;
 
 .wrapper {
   display: flex;
+  padding-left: 0px;
 }
 
 .wrapper #content-wrapper {

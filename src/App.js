@@ -19,15 +19,13 @@ import TokenValidation from "./components/TokenValidation";
 
  export default class App extends Component{
 
+
 render() {
   return (
     <Router>
     <div className="App container-fluid">
 
           <Switch>
-
-
-
           <Route path="/TokenValidation">
               <TokenValidation />
              </Route>
@@ -59,7 +57,6 @@ render() {
                <MainPage />
              </Route>
 
-        
             </Switch>
     </div>
   </Router>

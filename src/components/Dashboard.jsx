@@ -134,11 +134,6 @@ export default function Dashboard() {
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
-    <div className="container-fluid MuiTypography-rootcMJjnA" >
-    
-    <div className="row">
-      <div className="col-md-12">
-    
     <div className={classes.root}>
       <CssBaseline />
       
@@ -173,6 +168,8 @@ export default function Dashboard() {
         </Toolbar>
    
       </AppBar>
+
+      
       <Drawer
         variant="permanent"
         classes={{
@@ -217,8 +214,6 @@ export default function Dashboard() {
         </Container>
       </main>
     </div>
-     </div>
-    </div>
-    </div>
+  
   );
 }

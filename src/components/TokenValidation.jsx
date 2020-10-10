@@ -5,6 +5,28 @@ import {Link} from "react-router-dom";
 import '../index.css';
 
 export default class TokenValidation extends Component {
+     constructor(props) {
+        super(props)
+        this.state = {
+             email: '',
+              otp: '', 
+        }
+        
+        this.handleInputChange = this.handleInputChange.bind(this);
+        this.confirmPatient = this.confirmPatient.bind(this);
+      
+    }
+
+         handleInputChange(ev) {
+        const target = ev.target;
+        const inputName = target.name;        
+        const inputValue = target.value;
+
+        this.setState({
+            [inputName] : inputValue
+        });        
+    }
+
     render() {
 
         return (
@@ -19,20 +41,15 @@ export default class TokenValidation extends Component {
     <img src={hands} className="logo" alt="logo" />
     <h5 className="access">Verify <span className="accessb">Code</span> </h5>
       <hr/>
-    <form action="" method="post">
-      <div className="form-group">
-          <small  className="text-muted access">Email</small>
-          <input type="email" name=""  className="form-control rounded-pill" placeholder="" required/>
-      </div>
+    <form  onSubmit={this.confirmPatient}>
       <div className="form-group my-4 ">
           <small className="text-muted access">Verification Code</small>
-          <input type="text" className="form-control  rounded-pill" name=""  placeholder="" required/>
+          <input type="text" className="form-control  rounded-pill" name="otp" value={this.state.otp} onChange={this.handleInputChange}  placeholder="" required/>
        </div>
        <button className="btn text-white btn-outline-pink accent-4 btn-sm rounded-pill" >
             verify <span className="badge badge-primary "></span>
     </button>
 
-    <Link to="/Login" className="btn btn-info btn-sm">sign in test button</Link>
     </form>
        
     </div>

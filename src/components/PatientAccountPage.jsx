@@ -14,7 +14,6 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 
 import '../index.css';
-
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
