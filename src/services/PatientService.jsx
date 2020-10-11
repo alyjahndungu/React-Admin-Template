@@ -12,6 +12,10 @@ class PatientService extends React.Component{
         return axios.post(PATIENT_API_BASE_URL, patient);
     }
 
+       validatePatient(patientOtp){
+        return axios.post(PATIENT_API_BASE_URL, +'/TokenValidation' ,patientOtp);
+    }
+
     getPatientById(patientId){
         return axios.get(PATIENT_API_BASE_URL + '/' + patientId);
     }

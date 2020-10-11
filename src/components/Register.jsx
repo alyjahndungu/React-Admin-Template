@@ -14,7 +14,7 @@ export default class Register extends Component {
             firstname: '',
             lastname: '',
              email: '',
-            phoneno: '',
+            phoneNo: '',
             password: '',
             isLoading:false
             
@@ -49,14 +49,13 @@ export default class Register extends Component {
             firstname: this.state.firstname,
             lastname: this.state.lastname,
             email: this.state.email,
-            phoneno: this.state.phoneno,
+            phoneNo: this.state.phoneNo,
             password: this.state.password
 
             
         }
           console.log(JSON.stringify(patient));
-         
-
+        
     PatientService.createPatient(patient)
             .then(response => {
 
@@ -64,13 +63,13 @@ export default class Register extends Component {
    
            console.log(response)
 
-    // this.props.history.push({
-    //   pathname:'/TokenValidation',
-    //   state:{email:this.state.email}
-    // })
+    this.props.history.push({
+      pathname:'/TokenValidation',
+      state:{email:this.state.email}
+    })
   }else{
     this.setState({message : 'User added successfully.'});
-                this.props.history.push('/savePatient');
+                this.props.history.push('/Register');
 
   }
                 
@@ -133,7 +132,7 @@ export default class Register extends Component {
 
                        <div className="form-group">
                       <small className="text-muted">Phone Number</small>
-                      <input type="text" name="phoneno" value={this.state.phoneno} onChange={this.handleInputChange} className="form-control rounded-pill" placeholder="" required/>
+                      <input type="text" name="phoneNo" value={this.state.phoneMo} onChange={this.handleInputChange} className="form-control rounded-pill" placeholder="" required/>
                     </div>
 
                     <div className="form-group">

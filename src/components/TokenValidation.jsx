@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import hands from '../static/images/hands.png';
 import {Link} from "react-router-dom";
+import PatientService from "../services/PatientService";
 
 import '../index.css';
 
@@ -27,6 +28,24 @@ export default class TokenValidation extends Component {
         });        
     }
 
+      confirmPatient = (event) => {
+
+        event.preventDefault();  
+             let validate = {
+            otp: this.state.otp,
+            email:this.state.email
+        } 
+   console.log(JSON.stringify(validate));
+           PatientService.validatePatient(validate)
+            .then(response => {
+if (response.status === 201) {
+
+alert("User Created");
+}
+                  });
+        
+        }
+      
     render() {
 
         return (
@@ -39,11 +58,11 @@ export default class TokenValidation extends Component {
     </div>
     <div className="card-body border border-info rounded mb-1 p-5 grey lighten-5">
     <img src={hands} className="logo" alt="logo" />
-    <h5 className="access">Verify <span className="accessb">Code</span> </h5>
+    <h5 className="access">Verif<span className="accessb">ication</span> </h5>
       <hr/>
     <form  onSubmit={this.confirmPatient}>
       <div className="form-group my-4 ">
-          <small className="text-muted access">Verification Code</small>
+          <small className="text-muted access">Enter Verification Code</small>
           <input type="text" className="form-control  rounded-pill" name="otp" value={this.state.otp} onChange={this.handleInputChange}  placeholder="" required/>
        </div>
        <button className="btn text-white btn-outline-pink accent-4 btn-sm rounded-pill" >

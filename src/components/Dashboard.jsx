@@ -149,7 +149,7 @@ export default function Dashboard() {
             <MenuIcon />
           </IconButton>
           <Typography component="h6"  color="inherit" noWrap className={classes.title}>
-            Ternst<i className="fa fa-assistive-listening-systems" aria-hidden="true"></i>ne C<i className="fa fa-assistive-listening-systems" aria-hidden="true"></i>re
+            Sun<i className="fa fa-assistive-listening-systems" aria-hidden="true"></i>x C<i className="fa fa-assistive-listening-systems" aria-hidden="true"></i>re
             System
           </Typography>
           <IconButton color="inherit">
