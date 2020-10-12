@@ -136,7 +136,6 @@ export default function Dashboard() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      
       <AppBar position="absolute"  className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
           <IconButton
@@ -184,7 +183,6 @@ export default function Dashboard() {
         </div>
         <Divider />
        <Sidebar />
-
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
