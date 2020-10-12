@@ -19,12 +19,11 @@ import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import Avatar from '@material-ui/core/Avatar';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import Home from './Home';  
+import Home from './Home'; 
+import Sidebar from "../components/Sidebar"; 
 import '../index.css';
 
-import Sidebar from "../components/Sidebar";
-// import { mainListItems} from './Sidebar';
-//import { mainListItems} from './ListNav';
+
 
 function Copyright() {
   return (
@@ -194,7 +193,6 @@ export default function Dashboard() {
             {/* Chart */}
             <Grid item xs={12} md={8} lg={9}>
               <Paper className={fixedHeightPaper}>
-               
               </Paper>
             </Grid>
             {/* Recent Deposits */}
