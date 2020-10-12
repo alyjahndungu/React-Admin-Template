@@ -81,6 +81,8 @@ Stay at home and avoid close contact with other people for at least 7 days - peo
                   </Link>
                   </div>
 
+
+
                   <div className="col-sm-6">
                   <Link to="/FacilityRegister" className="btn text-white blue lighten-2 btn-md rounded-pill">
                   Register 
