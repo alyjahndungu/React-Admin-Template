@@ -29,9 +29,6 @@ color: aliceblue;
   overflow-x: hidden;
 } */
 
-.wrapper #content-wrapper #content {
-  flex: 0 0 auto;
-}
 
 .text-uppercase, .dropdown .dropdown-menu .dropdown-header, .sidebar .sidebar-heading {
   text-transform: uppercase !important;

@@ -13,6 +13,8 @@ import ExpandMore from '@material-ui/icons/ExpandMore';
 import {Link} from "react-router-dom";
 import StarBorder from '@material-ui/icons/StarBorder';
 import BuildIcon from '@material-ui/icons/Build';
+import NightsStayIcon from '@material-ui/icons/NightsStay';
+import PersonAddDisabledIcon from '@material-ui/icons/PersonAddDisabled';
 
 import EcoIcon from '@material-ui/icons/Eco';
 
@@ -220,6 +222,22 @@ const [open2, setOpen2] = React.useState(true);
           </ListItem>
         </List>
       </Collapse>  
+
+        <ListItem button>
+        <ListItemIcon>
+          <PersonAddDisabledIcon className="text-white" />
+        </ListItemIcon>
+         <Link className="nav-link text-white" to="#">
+          <span>Logout</span></Link>
+      </ListItem>
+
+        <ListItem button>
+        <ListItemIcon>
+          <NightsStayIcon className="text-white" />
+        </ListItemIcon>
+         <Link className="nav-link text-white" to="#">
+          <span>About System</span></Link>
+      </ListItem>
     </List>
 
     </div>
