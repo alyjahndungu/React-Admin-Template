@@ -12,7 +12,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
-import List from '@material-ui/core/List';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -22,8 +21,10 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import Home from './Home';  
 import '../index.css';
-import { mainListItems} from './Sidebar';
 
+import NestedList from "../components/NestedList";
+// import { mainListItems} from './Sidebar';
+//import { mainListItems} from './ListNav';
 
 function Copyright() {
   return (
@@ -183,7 +184,8 @@ export default function Dashboard() {
           </IconButton>
         </div>
         <Divider />
-       <List>{mainListItems}</List>
+       <NestedList />
+
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />

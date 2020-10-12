@@ -13,8 +13,8 @@ export default class Register extends Component {
         this.state = {
             firstname: '',
             lastname: '',
-            email: '',
-            phoneNo: '',
+             email: '',
+            phoneno: '',
             password: '',
             isLoading:false
             
@@ -49,13 +49,14 @@ export default class Register extends Component {
             firstname: this.state.firstname,
             lastname: this.state.lastname,
             email: this.state.email,
-            phoneNo: this.state.phoneNo,
+            phoneno: this.state.phoneno,
             password: this.state.password
 
             
         }
           console.log(JSON.stringify(patient));
-        
+         
+
     PatientService.createPatient(patient)
             .then(response => {
 
@@ -63,15 +64,13 @@ export default class Register extends Component {
    
            console.log(response)
 
-    this.props.history.push({
-      pathname:'/TokenValidation',
-      state:{email:this.state.email}
-    })
-
-
+    // this.props.history.push({
+    //   pathname:'/TokenValidation',
+    //   state:{email:this.state.email}
+    // })
   }else{
     this.setState({message : 'User added successfully.'});
-                this.props.history.push('/Login');
+                this.props.history.push('/savePatient');
 
   }
                 
@@ -134,7 +133,7 @@ export default class Register extends Component {
 
                        <div className="form-group">
                       <small className="text-muted">Phone Number</small>
-                      <input type="text" name="phoneNo" value={this.state.phoneMo} onChange={this.handleInputChange} className="form-control rounded-pill" placeholder="" required/>
+                      <input type="text" name="phoneno" value={this.state.phoneno} onChange={this.handleInputChange} className="form-control rounded-pill" placeholder="" required/>
                     </div>
 
                     <div className="form-group">
@@ -150,7 +149,7 @@ export default class Register extends Component {
       
     </div>
     <div className="card-footer text-muted info-color white-text">
-      <Link to="/Login" className="btn btn-outline-white accent-4 btn-sm rounded-pill btn-sm">Have an Account?</Link>
+      <Link to="/TokenValidation" className="btn btn-outline-white accent-4 btn-sm rounded-pill btn-sm">Have an Account?</Link>
     </div>
   
                 </div>
