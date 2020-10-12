@@ -22,7 +22,7 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import Home from './Home';  
 import '../index.css';
 
-import NestedList from "../components/NestedList";
+import Sidebar from "../components/Sidebar";
 // import { mainListItems} from './Sidebar';
 //import { mainListItems} from './ListNav';
 
@@ -184,7 +184,7 @@ export default function Dashboard() {
           </IconButton>
         </div>
         <Divider />
-       <NestedList />
+       <Sidebar />
 
       </Drawer>
       <main className={classes.content}>
