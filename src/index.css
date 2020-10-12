@@ -20,17 +20,17 @@ color: aliceblue;
 
 .wrapper {
   display: flex;
-  padding-left: 0px;
-}
-
-.wrapper #content-wrapper {
-  background-color: #f8f9fc;
-  width: 100%;
   overflow-x: hidden;
 }
 
+/* .wrapper #content-wrapper {
+  background-color: coral;
+  width: 100%;
+  overflow-x: hidden;
+} */
+
 .wrapper #content-wrapper #content {
-  flex: 1 0 auto;
+  flex: 0 0 auto;
 }
 
 .text-uppercase, .dropdown .dropdown-menu .dropdown-header, .sidebar .sidebar-heading {
@@ -65,39 +65,7 @@ color: aliceblue;
   font-weight: 700;
 }
 
-.sidebar #sidebarToggle {
-  width: 2.5rem;
-  height: 2.5rem;
-  text-align: center;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
 
-.sidebar #sidebarToggle::after {
-  font-weight: 900;
-  content: '\f104';
-  font-family: 'Font Awesome 5 Free';
-  margin-right: 0.1rem;
-}
-
-.sidebar #sidebarToggle:hover {
-  text-decoration: none;
-}
-
-.sidebar #sidebarToggle:focus {
-  outline: none;
-}
-
-.sidebar.toggled {
-  width: 0 !important;
-  overflow: hidden;
-}
-
-.sidebar.toggled #sidebarToggle::after {
-  content: '\f105';
-  font-family: 'Font Awesome 5 Free';
-  margin-left: 0.25rem;
-}
 
 .sidebar .sidebar-brand {
   height: 4.375rem;
@@ -365,24 +333,6 @@ color: aliceblue;
   overflow: hidden;
 }
 
-.sidebar.toggled #sidebarToggle::after {
-  content: '\f105';
-  font-family: 'Font Awesome 5 Free';
-  margin-left: 0.25rem;
-}
-
-.topbar #sidebarToggleTop {
-  height: 2.5rem;
-  width: 2.5rem;
-}
-
-.topbar #sidebarToggleTop:hover {
-  background-color: #eaecf4;
-}
-
-.topbar #sidebarToggleTop:active {
-  background-color: #dddfeb;
-}
 
 .textT{
   color: #2c003e;

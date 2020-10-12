@@ -13,6 +13,7 @@ import PatientAccountPage from "./components/PatientAccountPage";
 import Dashboard from "./components/Dashboard";
 import MainPage from "./components/MainPage"; 
 import TokenValidation from "./components/TokenValidation";
+import FacilityRegister from "./components/FacilityRegister";
 
  
 
@@ -25,6 +26,10 @@ render() {
     <div className="App container-fluid">
 
           <Switch>
+          <Route path="/FacilityRegister">
+              <FacilityRegister />
+             </Route>
+
           <Route path="/TokenValidation">
               <TokenValidation />
              </Route>

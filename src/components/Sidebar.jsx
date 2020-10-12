@@ -5,8 +5,8 @@ import '../index.css';
 
 
 export const mainListItems = (
-  <div className="wrapper stylish-color-dark">
-  
+
+     <div className="wrapper stylish-color-dark">
     <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <a className="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
@@ -116,6 +116,17 @@ export const mainListItems = (
       </li>
       <hr className="sidebar-divider d-none d-md-block"/>
 
+ <li className="nav-item">
+        <Link className="nav-link" to="#">
+          <i className="fas fa-fw fa-chart-area"></i>
+          <span>Manage Account</span></Link>
+      </li>
+
+      <li className="nav-item">
+        <Link className="nav-link" to="#">
+          <i className="fas fa-fw fa-chart-area"></i>
+          <span>Logout</span></Link>
+      </li>
      
 </ul>
  

@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
      
   },
   toolbar: {
-    paddingRight: 24, // keep right padding when drawer closed
+    paddingRight: 14, // keep right padding when drawer closed
   },
   toolbarIcon: {
     display: 'flex',
@@ -166,8 +166,8 @@ export default function Dashboard() {
                  
         <Avatar alt="T" src=".../static/images/logotab.png"/>
         </Toolbar>
-   
       </AppBar>
+
 
       
       <Drawer
