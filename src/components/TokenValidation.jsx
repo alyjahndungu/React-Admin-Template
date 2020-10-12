@@ -38,7 +38,7 @@ export default class TokenValidation extends Component {
    console.log(JSON.stringify(validate));
            PatientService.validatePatient(validate)
             .then(response => {
-if (response.status === 201) {
+      if (response.status === 201) {
 
 alert("User Created");
 }
@@ -53,6 +53,9 @@ alert("User Created");
     <div className="row">
     <div className="col-sm-4"></div>
     <div className="col-sm-4 assn">
+    <div class="alert alert-success" role="alert">
+
+
      <div className=" card-header info-color mb-1  white-text">
     <h3 className="access">Sunx<span className="accessb">Access</span> </h3>
     </div>
@@ -74,6 +77,7 @@ alert("User Created");
     </div>
     <div className="card-footer text-muted info-color white-text">
       <Link to="/" className="btn text-white btn-outline-white accent-4 btn-sm rounded-pill">Resend Code?</Link>
+    </div>
     </div>
     </div>
     <div className="col-sm-4"></div>

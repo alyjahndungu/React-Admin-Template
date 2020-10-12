@@ -13,7 +13,7 @@ export default class Register extends Component {
         this.state = {
             firstname: '',
             lastname: '',
-             email: '',
+            email: '',
             phoneNo: '',
             password: '',
             isLoading:false
@@ -67,9 +67,11 @@ export default class Register extends Component {
       pathname:'/TokenValidation',
       state:{email:this.state.email}
     })
+
+
   }else{
     this.setState({message : 'User added successfully.'});
-                this.props.history.push('/Register');
+                this.props.history.push('/Login');
 
   }
                 
@@ -148,7 +150,7 @@ export default class Register extends Component {
       
     </div>
     <div className="card-footer text-muted info-color white-text">
-      <Link to="/TokenValidation" className="btn btn-outline-white accent-4 btn-sm rounded-pill btn-sm">Have an Account?</Link>
+      <Link to="/Login" className="btn btn-outline-white accent-4 btn-sm rounded-pill btn-sm">Have an Account?</Link>
     </div>
   
                 </div>

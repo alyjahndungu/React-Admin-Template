@@ -2,6 +2,7 @@ import React from 'react'
 import axios from 'axios';
 
 const PATIENT_API_BASE_URL = "http://localhost:8000/api/v1/patient";
+const PATIENT_CONF_API_BASE_URL = "http://localhost:8000/api/v1/patientOtp";
 class PatientService extends React.Component{
 
  getPatients(){
@@ -13,7 +14,7 @@ class PatientService extends React.Component{
     }
 
        validatePatient(patientOtp){
-        return axios.post(PATIENT_API_BASE_URL, +'/TokenValidation' ,patientOtp);
+        return axios.post(PATIENT_CONF_API_BASE_URL, +'/TokenValidation' ,patientOtp);
     }
 
     getPatientById(patientId){

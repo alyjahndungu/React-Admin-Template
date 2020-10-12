@@ -15,8 +15,6 @@ import MainPage from "./components/MainPage";
 import TokenValidation from "./components/TokenValidation";
  
 
-
-
  export default class App extends Component{
 
 

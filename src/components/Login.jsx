@@ -10,7 +10,8 @@ export default class Login extends Component {
    constructor(props) {
     super(props);
     this.login = this.login.bind(this);
-    this.handleChange = this.handleChange.bind(this);
+    this.handleUNameChange = this.handleUNameChange.bind(this);
+    this.handlePasswordChange = this.handlePasswordChange.bind(this);
 
     this.state = {
       email: '',
@@ -18,22 +19,55 @@ export default class Login extends Component {
     };
   }
   
+ login = () => {
+        
+       let User={
+         email:this.state.username,
+        password:this.state.password
+        }
 
-  componentDidUpdate() {
-    // If user has logged in successfully, go to dashboard
-      this.props.history.push('/Dashboard');
-    
-  }
+        fetch('/api/v1/patient/login', {
+          body: JSON.stringify(User),             
+          cache: 'no-cache', 
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          },
+            method: 'POST', 
+          })
+         .then( (response) => {
+             if(response.status===200){
 
-  handleChange(event) {
-    this.setState({
-      [event.target.id]: event.target.value
-    });
-  }
+               
 
-  login() {
-    this.props.login(this.state.username, this.state.password);
-  }
+                this.setState({
+                    header:response.headers.get('Authorization'),
+                    hasError:'',         
+                })
+                localStorage.setItem('auth',this.state.header);
+               // passing prop to parent component DialogComponent.tsx
+               this.props.openDialog(false);
+            }
+            else { // unauthorized
+                localStorage.removeItem('auth')
+                this.setState({
+                    hasError:response.statusText
+              }) 
+            }   
+        });
+      };
+
+      handleUNameChange=(event:any)=> {
+        this.setState({
+            name: event.target.value  
+        });
+      }
+      
+      handlePasswordChange=(event:any)=> {
+        this.setState({
+            password: event.target.value
+        });
+      }
 
     render() {
 
@@ -55,12 +89,12 @@ export default class Login extends Component {
     <form>
     <div className="form-group">
       <small  className="text-muted access">Username</small>
-      <input type="email" name="username" value={this.state.username} className="form-control rounded-pill"  onChange={this.handleChange} placeholder="" required/>
+      <input type="email" name="username" value={this.state.username} className="form-control rounded-pill"  onChange={this.handleUNameChange} placeholder="" required/>
     </div>
 
     <div className="form-group my-4 ">
       <small className="text-muted access">Password</small>
-      <input type="password" className="form-control   rounded-pill" name="password" value={this.state.password} onChange={this.handleChange} placeholder="" required/>
+      <input type="password" className="form-control   rounded-pill" name="password" value={this.state.password} onChange={this.handlePasswordChange} placeholder="" required/>
     </div>
     
        <button  onClick={() => this.login()} className="btn text-white btn-outline-pink accent-4 btn-sm rounded-pill" >
