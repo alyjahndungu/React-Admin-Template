@@ -345,6 +345,44 @@ color: aliceblue;
   color: rgba(255, 255, 255, 0.5);
 }
 
+.sidebar #sidebarToggle::after {
+  font-weight: 900;
+  content: '\f104';
+  font-family: 'Font Awesome 5 Free';
+  margin-right: 0.1rem;
+}
+
+.sidebar #sidebarToggle:hover {
+  text-decoration: none;
+}
+
+.sidebar #sidebarToggle:focus {
+  outline: none;
+}
+
+.sidebar.toggled {
+  width: 0 !important;
+  overflow: hidden;
+}
+
+.sidebar.toggled #sidebarToggle::after {
+  content: '\f105';
+  font-family: 'Font Awesome 5 Free';
+  margin-left: 0.25rem;
+}
+
+.topbar #sidebarToggleTop {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.topbar #sidebarToggleTop:hover {
+  background-color: #eaecf4;
+}
+
+.topbar #sidebarToggleTop:active {
+  background-color: #dddfeb;
+}
 
 .textT{
   color: #2c003e;

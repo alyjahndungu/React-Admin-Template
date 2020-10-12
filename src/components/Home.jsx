@@ -1,32 +1,69 @@
 import React, { Component } from 'react'
 
-import {Link} from "react-router-dom";
+import { Line } from "react-chartjs-2";
+import { MDBContainer } from "mdbreact";
 
 
 export default class Home extends Component {
+    state = {
+    dataLine: {
+      labels: ["January", "February", "March", "April", "May", "June", "July", "August", "September"],
+      datasets: [
+        {
+          label: "Payments",
+          fill: true,
+          lineTension: 0.3,
+          backgroundColor: "rgba(225, 204,230, .3)",
+          borderColor: "rgb(205, 130, 158)",
+          borderCapStyle: "butt",
+          borderDash: [],
+          borderDashOffset: 0.0,
+          borderJoinStyle: "miter",
+          pointBorderColor: "rgb(205, 130,1 58)",
+          pointBackgroundColor: "rgb(255, 255, 255)",
+          pointBorderWidth: 10,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: "rgb(0, 0, 0)",
+          pointHoverBorderColor: "rgba(220, 220, 220,1)",
+          pointHoverBorderWidth: 2,
+          pointRadius: 1,
+          pointHitRadius: 10,
+          data: [45, 49, 60, 51, 56, 55, 40, 45, 49]
+        },
+        {
+          label: "Appointments",
+          fill: true,
+          lineTension: 0.3,
+          backgroundColor: "rgba(184, 185, 210, .3)",
+          borderColor: "rgb(35, 26, 136)",
+          borderCapStyle: "butt",
+          borderDash: [],
+          borderDashOffset: 0.0,
+          borderJoinStyle: "miter",
+          pointBorderColor: "rgb(35, 26, 136)",
+          pointBackgroundColor: "rgb(255, 255, 255)",
+          pointBorderWidth: 10,
+          pointHoverRadius: 5,
+          pointHoverBackgroundColor: "rgb(0, 0, 0)",
+          pointHoverBorderColor: "rgba(220, 220, 220, 1)",
+          pointHoverBorderWidth: 2,
+          pointRadius: 1,
+          pointHitRadius: 10,
+          data: [18, 28, 30, 14, 26, 27, 10, 22, 14]
+        }
+      ]
+    }
+  };
+
     render() {
         return (
 
             <div className="App container-fluid">
-                 <div className="row">
-                <div className="col-sm-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus explicabo cum nemo suscipit omnis eius commodi blanditiis aliquam non delectus, consequuntur odit praesentium neque facere. Facilis labore perspiciatis soluta mollitia.
-                </div>
-                <div className="col-sm-4">
-              
-             <Link to="/Register" className="btn btn-success btn-sm">
-             Register as Doctor 
-             </Link>
-           
-             <Link to="/PatientAccountPage" className="btn btn-success btn-sm">
-              Register as Patient 
-             </Link>
-         
-                </div>
-                <div className="col-sm-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam incidunt voluptate sequi, atque adipisci veniam dolores totam eos deserunt esse, maxime, quia beatae ab porro nostrum consequuntur saepe reiciendis temporibus.
-                </div>
-                </div>
+               
+          <MDBContainer>
+        <h3 className="mt-5">Appointments chart</h3>
+        <Line data={this.state.dataLine} options={{ responsive: true }} />
+      </MDBContainer>
             </div>
 
 
